@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var liftSchema = new Schema({
   age: Number,
+  sex: String,
   weight: Number,
   height: Number,
   male: Boolean,
