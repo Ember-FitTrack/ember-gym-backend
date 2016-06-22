@@ -8,7 +8,8 @@ var liftSchema = new Schema({
   male: Boolean,
   bench: Number,
   squat: Number,
-  deadlift: Number
+  deadlift: Number,
+  total: Number
 });
 
 module.exports = mongoose.model('Lift', liftSchema);

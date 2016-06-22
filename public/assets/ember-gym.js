@@ -403,7 +403,7 @@ define('ember-gym/router', ['exports', 'ember', 'ember-gym/config/environment'],
 define('ember-gym/routes/lift', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({
     model: function model() {
-      return this.store.find('lift');
+      return this.store.find('lifts');
     }
   });
 });
@@ -838,7 +838,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("ember-gym/app")["default"].create({"name":"ember-gym","version":"0.0.0+541d7b53"});
+  require("ember-gym/app")["default"].create({"name":"ember-gym","version":"0.0.0+46f0419c"});
 }
 
 /* jshint ignore:end */
