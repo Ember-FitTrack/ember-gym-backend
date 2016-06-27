@@ -1,4 +1,6 @@
-var Lift = require('../models/lifts');
+'use strict'
+
+let Lift = require('../models/lifts');
 
 module.exports.getAllLifts = function(req, res) {
   Lift.find(function(err, lifts) {

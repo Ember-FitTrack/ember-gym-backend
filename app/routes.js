@@ -1,5 +1,8 @@
-var lifts = require('../api/lifts');
-var path  = require('path');
+'use strict'
+
+let lifts = require('../api/lifts');
+let path  = require('path');
+let gyms  = require('../api/google-gym');
 
 module.exports = function(router) {
   router.route('/lifts')
@@ -12,8 +15,22 @@ module.exports = function(router) {
       lifts.getAllLifts(req, res);
     });
 
+  router.route('/google-gym')
+    .get(function(req, res) {
+      gyms.findGymCoordinates(req, res);
+    });
+
+  router.route('/gyms')
+    .post(function(req, res) {
+      gyms.addGym(req, res);
+    })
+
+    .get(function(req, res) {
+      gyms.findGym(req, res);
+    });
+
   router.route('*').get(function(req, res) {
     res.sendFile(path.join(__dirname, '../public', '/index.html'));
-  });
+    });
 
 };

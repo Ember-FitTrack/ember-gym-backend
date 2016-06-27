@@ -1,7 +1,9 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+'use strict'
 
-var liftSchema = new Schema({
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
+
+let liftSchema = new Schema({
   age: Number,
   sex: String,
   weight: Number,
