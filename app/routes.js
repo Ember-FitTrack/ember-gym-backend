@@ -2,8 +2,8 @@
 
 let lifts = require('../api/lifts');
 let path  = require('path');
-let gyms  = require('../api/google-gym');
-
+let gyms  = require('../api/gyms');
+let googleApi = require('../api/google-gym');
 module.exports = function(router) {
   router.route('/lifts')
     .post(function(req, res) {
@@ -17,7 +17,7 @@ module.exports = function(router) {
 
   router.route('/google-gym')
     .get(function(req, res) {
-      gyms.findGymCoordinates(req, res);
+      googleApi.findGymCoordinates(req, res);
     });
 
   router.route('/gym')
