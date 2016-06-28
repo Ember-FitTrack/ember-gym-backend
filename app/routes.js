@@ -20,7 +20,7 @@ module.exports = function(router) {
       gyms.findGymCoordinates(req, res);
     });
 
-  router.route('/gyms')
+  router.route('/gym')
     .post(function(req, res) {
       gyms.addGym(req, res);
     })
