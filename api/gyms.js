@@ -4,12 +4,16 @@ let Gyms = require('../models/gyms');
 
 module.exports.findGym = function(req, res) {
   //see if gym is in database/getinfo
-  Gyms.find(function(err, gyms) {
+  //console.log(req.query);
+  Gyms.find({"latitude": req.query.latitude},
+  function(err, gyms) {
+    console.log(gyms);
     if(err) {
       res.send(err);
     }
     res.json({gyms: gyms});
   });
+
 };
 
 module.exports.addGym = function(req, res) {

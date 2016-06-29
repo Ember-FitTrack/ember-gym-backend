@@ -7,7 +7,7 @@ module.exports.findGymCoordinates = function(req, res) {
     method: 'GET',
     url: 'https://maps.googleapis.com/maps/api/geocode/json?',
     qs: {
-      address: '341 Gill Road Apollo, PA',
+      address: req.query.address,
       key: 'AIzaSyBQ5YCopzxqDu-fvlTX_dTbwuQ-i_hDjd8'
     }
   }
