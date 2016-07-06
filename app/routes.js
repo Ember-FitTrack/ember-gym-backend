@@ -23,6 +23,10 @@ module.exports = function(router) {
   router.route('/gym-lifts')
     .get(function(req, res) {
       gymLifts.findLifts(req, res);
+    })
+
+    .post(function(req, res) {
+      gymLifts.addLift(req, res);
     });
 
   router.route('/gym')

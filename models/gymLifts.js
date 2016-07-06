@@ -17,4 +17,4 @@ let gymLiftSchema = new Schema({
   total: Number
 });
 
-module.exports = mongoose.model('gymLifts', gymLiftSchema);
+module.exports = mongoose.model('gymlifts', gymLiftSchema);
