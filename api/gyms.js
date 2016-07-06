@@ -7,7 +7,6 @@ module.exports.findGym = function(req, res) {
   //console.log(req.query);
   Gyms.find({"latitude": req.query.latitude},
   function(err, gyms) {
-    console.log(gyms);
     if(err) {
       res.send(err);
     }

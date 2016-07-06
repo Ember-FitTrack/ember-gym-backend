@@ -8,7 +8,6 @@ let gymSchema = new Schema({
   address: String,
   latitude: Number,
   longitude: Number
-
 });
 
 module.exports = mongoose.model('Gym', gymSchema);
