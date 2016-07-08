@@ -19,6 +19,5 @@ module.exports.addLift = function(req, res) {
       res.send(err);
     }
     res.json({lift: lift});
-    console.log('json sent');
   });
 };
