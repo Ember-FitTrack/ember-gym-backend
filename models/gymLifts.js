@@ -6,6 +6,7 @@ let Schema = mongoose.Schema;
 let gymLiftSchema = new Schema({
   latitude: Number,
   longitude: Number,
+  name: String,
   age: Number,
   sex: String,
   weight: Number,
