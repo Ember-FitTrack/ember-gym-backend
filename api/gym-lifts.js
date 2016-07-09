@@ -6,13 +6,10 @@ module.exports.findLifts = function(req, res) {
     console.log(req.query);
   gymLifts.find({"latitude": req.query.latitude},
     function(err, lifts) {
-
-      console.log(lifts);
       if (err) {
         res.send(err);
       }
       res.json({gymlift: lifts});
-
     });
 };
 
