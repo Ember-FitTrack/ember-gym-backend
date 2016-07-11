@@ -6,6 +6,7 @@ let should = chai.should();
 chai.use(chaiHttp);
 describe('Testing API Endpoints', function() {
   describe('GET Requests', function() {
+
     it('responds to /', function(done) {
       chai.request(server)
         .get('/')

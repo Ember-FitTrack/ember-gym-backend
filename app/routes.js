@@ -6,6 +6,7 @@ let gyms  = require('../api/gyms');
 let googleApi = require('../api/google-gym');
 let gymLifts = require('../api/gym-lifts.js');
 module.exports = function(router) {
+  //configure our routes for the endpoints
   router.route('/lifts')
     .post(function(req, res) {
       lifts.addLift(req, res);
