@@ -8,7 +8,6 @@ let liftSchema = new Schema({
   sex: String,
   weight: Number,
   height: Number,
-  male: Boolean,
   bench: Number,
   squat: Number,
   deadlift: Number,
